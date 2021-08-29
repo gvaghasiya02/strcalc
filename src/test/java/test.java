@@ -64,5 +64,15 @@ public class test {
             assertEquals("Negative numbers are not allowed to use: -2,-1",e.getMessage());
         }
     }
+    //extra test cases
+    @Test
+    public void extraCase1() {
+        assertEquals(10,calc.add("//[;][,][*]\n1;2,3*4"));
+    }
+
+    @Test
+    public void extraCase2() {
+        assertEquals(14,calc.add("//[**][++][,][;]\n1**2,3++8"));
+    }
 
 }

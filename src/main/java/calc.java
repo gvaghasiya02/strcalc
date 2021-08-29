@@ -68,11 +68,24 @@ public class calc {
     private int sum(String[] nums) {
         int sum;
         sum = 0;
+        checkNegative(nums);
         for(String values:nums) {
             if(Integer.parseInt(values) <= 1000){
                 sum += Integer.parseInt(values);
             }
         }
         return sum;
+    }
+    private void checkNegative(String[] nums) {
+        List<String> number = new ArrayList<>();
+        for(String val:nums) {
+            if(Integer.parseInt(val) < 0) {
+                number.add(val);
+            }
+        }
+        String checkNegative=String.join(",",number);
+        if(!checkNegative.isEmpty()) {
+            throw new IllegalArgumentException("Negative numbers are not allowed to use: "+checkNegative);
+        }
     }
 }

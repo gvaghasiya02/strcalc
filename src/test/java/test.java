@@ -47,5 +47,22 @@ public class test {
     public void greaterThanThousandIgnored() {
         assertEquals(33,calc.add("1,7,1003,25"));
     }
+    //negative number cases
+    @Test
+    public void negativeNumbers() {
+        try {
+            calc.add("-2");
+        } catch (IllegalArgumentException e) {
+            assertEquals("Negative numbers are not allowed to use: -2",e.getMessage());
+        }
+    }
+    @Test
+    public void negativeNumbersList() {
+        try {
+            calc.add("-2,5,7,-1");
+        } catch (IllegalArgumentException e) {
+            assertEquals("Negative numbers are not allowed to use: -2,-1",e.getMessage());
+        }
+    }
 
 }

@@ -21,4 +21,10 @@ public class test {
     public void isSingleValue() {
         assertEquals(1, calc.add("1"));
     }
+
+    //2nd case
+    @Test
+    public void sofMultipleValue() {
+        assertEquals(15,calc.add("1,2,8,4"));
+    }
 }

@@ -69,9 +69,9 @@ public class calc {
         int sum;
         sum = 0;
         for(String values:nums) {
-            if(Integer.parseInt(values) <= 1000){
+
                 sum += Integer.parseInt(values);
-            }
+
         }
         return sum;
     }

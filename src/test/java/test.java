@@ -27,4 +27,15 @@ public class test {
     public void sofMultipleValue() {
         assertEquals(15,calc.add("1,2,8,4"));
     }
+
+    //3rd case
+    @Test
+    public void sofMultipleValueNewLine() {
+        assertEquals(50,calc.add("20\n10\n19,1"));
+    }
+
+    @Test
+    public void allNewLine() {
+        assertEquals(0,calc.add("\n\n\n\n"));
+    }
 }

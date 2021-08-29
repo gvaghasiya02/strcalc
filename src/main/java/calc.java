@@ -7,7 +7,7 @@ public class calc {
             return 0;
         }
         String[] nums;
-        String delimiter=",";
+        String delimiter=("[,\n]");
         nums=input.split(delimiter);
         return sum(nums);
     }

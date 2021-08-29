@@ -43,6 +43,9 @@ public class test {
     public void diffDelimiters() {
         assertEquals(6,calc.add("//;\n3;1;2"));
     }
-
+    @Test
+    public void greaterThanThousandIgnored() {
+        assertEquals(33,calc.add("1,7,1003,25"));
+    }
 
 }

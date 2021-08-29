@@ -6,7 +6,7 @@ import static org.junit.Assert.assertEquals;
 
 public class test {
     calc calc;
-
+    //1st case
     @Before
     public void init() {
         calc = new calc();
